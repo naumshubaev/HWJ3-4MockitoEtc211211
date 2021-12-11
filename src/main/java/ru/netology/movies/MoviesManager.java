@@ -20,7 +20,6 @@ public class MoviesManager {
         this.maxLength = maxLength;
     }
 
-//    private MoviesManager[] items = new MoviesManager[0]; // it was a mistake, was it not?
 
     public void add(MovieInfo item) {
 //        int length = items.length + 1; // WHY do we need an additional valuable? Does it improve testability?
