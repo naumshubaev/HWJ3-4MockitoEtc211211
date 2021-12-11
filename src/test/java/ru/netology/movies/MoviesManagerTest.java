@@ -42,8 +42,8 @@ class MoviesManagerTest {
     public void getAll() {
 
         MovieInfo[] actualAll = manager.getAll();
-        MovieInfo[] expected = new MovieInfo[]{twelfth, eleventh, tenth, ninth, eighth, seventh, sixth, fifth, fourth, third}; //, second, first};
-// {twelfth, eleventh, tenth}
+        MovieInfo[] expected = new MovieInfo[]{twelfth, eleventh, tenth, ninth, eighth, seventh, sixth, fifth, fourth, third};
+
         assertArrayEquals(expected, actualAll);
     }
 
@@ -53,16 +53,16 @@ class MoviesManagerTest {
 
         MovieInfo[] actualAll = manager.getAll();
         MovieInfo[] expected = new MovieInfo[]{twelfth, eleventh, tenth, ninth, eighth, seventh, sixth, fifth, fourth, third, second, first};
-// {twelfth, eleventh, tenth}
+
         assertArrayEquals(expected, actualAll);
     }
 
     @Test
     public void getAllDisplayThreeElements() {
-        manager.setMaxLength(3);
+        manager.setMaxLength(1);
 
         MovieInfo[] actualAll = manager.getAll();
-        MovieInfo[] expected = new MovieInfo[]{twelfth, eleventh, tenth};
+        MovieInfo[] expected = new MovieInfo[]{twelfth}
 
         assertArrayEquals(expected, actualAll);
     }
@@ -82,8 +82,6 @@ class MoviesManagerTest {
 
         assertArrayEquals(expected, actualAll);
 
-
-        //   second, first};
     }
 
     @Test
@@ -99,18 +97,3 @@ class MoviesManagerTest {
         //   second, first};
     }
 }
-/*
-public class CartManagerTestNonEmptyWithSetup {
-    private CartManager manager = new CartManager();
-    private PurchaseItem first = new PurchaseItem(1, 1, "first", 1, 1);
-    private PurchaseItem second = new PurchaseItem(2, 2, "second", 1, 1);
-    private PurchaseItem third = new PurchaseItem(3, 3, "third", 1, 1);
-
-    @BeforeEach
-    public void setUp() {
-        manager.add(first);
-        manager.add(second);
-        manager.add(third);
-    }
-
- */
