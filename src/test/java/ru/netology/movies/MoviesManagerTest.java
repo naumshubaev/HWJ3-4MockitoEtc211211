@@ -62,7 +62,7 @@ class MoviesManagerTest {
         manager.setMaxLength(1);
 
         MovieInfo[] actualAll = manager.getAll();
-        MovieInfo[] expected = new MovieInfo[]{twelfth}
+        MovieInfo[] expected = new MovieInfo[]{twelfth};
 
         assertArrayEquals(expected, actualAll);
     }
